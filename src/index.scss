@@ -1,13 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+
+$bg-primary: #e8e8e8;
+$text: #2b2b2b;
+$gray: #898989;
+$soft-gray: #f8f8f8;
+
+
 *{
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   list-style-position: inside;
   border: none;
-  font: inherit;
-  
+  font: inherit;  
 }
 
 html{
   font-size:  62.5%;
+}
+
+body{
+  font-family: 'Quicksand';
+  font-optical-sizing: auto;
+  font-size: 1.6rem;
+  font-weight: 400;
+  background: $bg-primary;
+  color: $text;
+}
+
+h1{
+  font-size: 6.4rem;
+  font-weight: 700;
+}
+h2{
+  font-size: 4.8rem;
+  font-weight: 600;
+}
+h3{
+  font-size: 4.0rem;
+  font-weight: 500;
+}
+h4{
+  font-size: 3.2rem;
+  font-weight: 400;
+}
+h5{
+  font-size: 2.4rem;
+  font-weight: 400;
 }
