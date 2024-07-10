@@ -35,3 +35,4 @@ SASS
 Axios
 React router dom
 Redux toolkit
+React hook form
