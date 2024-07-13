@@ -1,5 +1,8 @@
 import { useState } from 'react'
 import eonWhiteIcon from '../../assets/eon-white.svg'
+import searchIcon from '../../assets/icons/icon _search.svg'
+import cartIcon from '../../assets/icons/icon _cart.svg'
+import menuIcon from '../../assets/icons/user_circle_alt.svg'
 import './navbar.scss'
 export default function Header() {
     /*
@@ -15,7 +18,7 @@ export default function Header() {
         sethideMenu(!hideMenu)
         // criar uma classe e adicionar ela no 
         // body para impedir o scroll
-        
+
         // hideMenu === true ?
         // document.body.style.overflowY = 'scroll' :
         // document.body.style.overflowY = 'hidden'
@@ -26,24 +29,21 @@ export default function Header() {
     return (
         <>
             <nav className={'principalNav'}>
-              {/* <p style={{color: 'yellow'}}>{visibleMenu ? 'Ola' : 'Tchau'}</p>   */}
-                <a href='#'>
-                    <img className='menu-icon' src={eonWhiteIcon} />
+                {/* <p style={{color: 'yellow'}}>{visibleMenu ? 'Ola' : 'Tchau'}</p>   */}
+                {/* <button className='menu-icon' onClick={showMenu}>E</button> */}
+                <a href='#' className='menu-icon'>
+                    <img src={eonWhiteIcon} />
                 </a>
                 <menu className={`${hideMenu ? 'showNav' : 'hideNav'}`}>
                     <li><a href="#">Inicio</a></li>
                     <li><a href="#">Produtos</a></li>
                     <li><a href="#">Suporte</a></li>
                 </menu>
-
                 <section>
-                    <li></li>
-                    <li></li>
-                    <li></li>
+                    <button style={{backgroundImage: `url(${searchIcon})`}} onClick={showMenu}></button>
+                    <button style={{backgroundImage: `url(${cartIcon})`}} onClick={showMenu}></button>
+                    <button style={{backgroundImage: `url(${menuIcon})`}} onClick={showMenu}></button>
                 </section>
-
-
-                <button onClick={showMenu}>X</button>
             </nav>
 
         </>
