@@ -2,43 +2,23 @@ import { useState } from 'react'
 import eonWhiteIcon from '../../assets/eon-white.svg'
 import searchIcon from '../../assets/icons/icon _search.svg'
 import cartIcon from '../../assets/icons/icon _cart.svg'
-import menuIcon from '../../assets/icons/user_circle_alt.svg'
+import userIcon from '../../assets/icons/icon_user_circle.svg'
+// import menuIcon from '../../assets/icons/icon_menu.svg'
+// import menuCloseIcon from '../../assets/icons/icon_menu-close.svg'
 import './navbar.scss'
 export default function Header() {
-    /*
-        classe transparente só vai ser ativada quando:
-        - estiver na home
-        - valor do scroll for menor que o banner
-    */
 
     const [hideMenu, sethideMenu] = useState(false)
 
     function showMenu() {
         const body = document.querySelector('body')
         const menu = document.querySelector('#links_container')
-console.log(menu)
         sethideMenu(!hideMenu)
         if (hideMenu === true) {
-
             body?.classList.remove('scrollBlock')
-            menu?.classList.remove('gradient')
-               menu?.classList.add('teste')
-
-        } else{
-
+        } else {
             body?.classList.add('scrollBlock')
-            menu?.classList.add('gradient')
-         
-           console.log('add?');
-            
         }
-
-        // criar uma classe e adicionar ela no 
-        // body para impedir o scroll
-        // hideMenu === true ?
-        // document.body.style.overflowY = 'scroll' :
-        // document.body.style.overflowY = 'hidden'
-        console.log('Valor', hideMenu)
     }
 
 
@@ -55,10 +35,15 @@ console.log(menu)
                     <li><a href="#">Produtos</a></li>
                     <li><a href="#">Suporte</a></li>
                 </menu>
-                <section>
-                    <button style={{ backgroundImage: `url(${searchIcon})` }} onClick={showMenu}></button>
-                    <button style={{ backgroundImage: `url(${cartIcon})` }} onClick={showMenu}></button>
-                    <button style={{ backgroundImage: `url(${menuIcon})` }} onClick={showMenu}></button>
+                <section className='menu_buttons'>
+                    <button style={{ backgroundImage: `url(${searchIcon})` }}></button>
+                    <button style={{ backgroundImage: `url(${cartIcon})` }} ></button>
+                    <button className={`menu_icon ${hideMenu ? 'menuCloseIcon' : 'menuOpenIcon'}`}
+                        onClick={showMenu}></button>
+                    {/* <button className='menu_icon' 
+                        style={{ backgroundImage: `url(${hideMenu ? menuCloseIcon : menuIcon})` }} 
+                        onClick={showMenu}></button> */}
+                    <button className='user_icon' style={{ backgroundImage: `url(${userIcon})` }} onClick={showMenu}></button>
                 </section>
             </nav>
         </>

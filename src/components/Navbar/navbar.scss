@@ -20,50 +20,38 @@ nav.principalNav {
     img {
       height: 100% !important;
     }
+
+  }
+  .menu_buttons{
+    button {
+      background: transparent;
+      width: 45px;
+      height: 45px;
+      font-size: 2em;
+      margin-left: 15px;
+      background-size: 40px;
+      background-repeat: no-repeat;
+      background-position: center;
+      cursor: pointer;
+    }
+    .user_icon{
+      display: none;
+    }
+    .menu_icon{
+      background: url('../../assets/icons/icon_menu.svg');
+      background-size: contain !important;
+      background-repeat: no-repeat !important;
+      transition: .25s linear;
+      &.menuOpenIcon{
+        background: url('../../assets/icons/icon_menu.svg');
+      }
+      &.menuCloseIcon{
+        background: url('../../assets/icons/icon_menu-close.svg');
+      }
+    }
+
   }
 
-  // menu {
-  //   top: 94px;
-  //   position: absolute;
-  //   flex-direction: column;
-
-  //   &.showNav {
-  //     backdrop-filter: blur(5px) !important;
-  //     width: 100%;
-  //     height: 100vh;
-  //     display: flex;
-
-  //     backdrop-filter: blur(8px);
-  //     mix-blend-mode: darken;
-  //   }
-
-  //   &.hideNav {
-  //     display: none;
-  //   }
-
-  //   a {
-  //     padding: 4px 16px;
-  //     margin-block: 12px;
-  //     font-size: 2.4rem;
-  //     //border: 1px solid red;
-  //     color: white;
-  //     margin-inline: 5px;
-  //     width: 100%;
-  //     display: inline-block;
-  //   }
-  // }
-
-  button {
-    background: transparent;
-    width: 45px;
-    height: 45px;
-    font-size: 2em;
-    margin-left: 15px;
-    background-size: 40px;
-    background-repeat: no-repeat;
-    background-position: center;
-    cursor: pointer;
-  }
 }
 
 @media screen and (max-width: 767px) {
@@ -83,15 +71,13 @@ nav.principalNav {
     top: 94px;
     position: absolute;
     flex-direction: column;
-
     &.showNav {
       backdrop-filter: blur(5px) !important;
       width: 100%;
       height: 100vh;
       display: flex;
-
       backdrop-filter: blur(8px);
-      mix-blend-mode: darken;
+      
     }
 
     &.hideNav {
@@ -162,7 +148,14 @@ nav.principalNav {
         display: inline-block;
       }
     }
-
+    .menu_buttons{
+      .menu_icon{
+        display: none;
+      }
+      .user_icon{
+        display: inline;
+      }
+    }
     button {}
   }
 }
