@@ -8,13 +8,12 @@ nav.principalNav {
   padding-block: 8px;
   top: 0;
   align-items: center;
-  // border: #ff0000 1px solid;
   justify-content: space-around;
-  backdrop-filter: blur(8px);
+  backdrop-filter: blur(3px);
   z-index: 10;
   display: flex;
 
-.menu-icon {
+  .menu-icon {
     height: 60px !important;
     display: inline-block;
 
@@ -23,34 +22,36 @@ nav.principalNav {
     }
   }
 
-  menu {
-    top: 94px;
-    position: absolute;
-    flex-direction: column;
+  // menu {
+  //   top: 94px;
+  //   position: absolute;
+  //   flex-direction: column;
 
-    &.showNav {
-      width: 100%;
-      height: 100vh;
-      background: beige;
-      display: flex;
-      background: rgb(104, 114, 104);
-    }
+  //   &.showNav {
+  //     backdrop-filter: blur(5px) !important;
+  //     width: 100%;
+  //     height: 100vh;
+  //     display: flex;
 
-    &.hideNav {
-      display: none;
-    }
+  //     backdrop-filter: blur(8px);
+  //     mix-blend-mode: darken;
+  //   }
 
-    a {
-      padding: 4px 16px;
-      margin-block: 12px;
-      font-size: 2.4rem;
-      border: 1px solid red;
-      color: white;
-      margin-inline: 5px;
-      width: 100%;
-      display: inline-block;
-    }
-  }
+  //   &.hideNav {
+  //     display: none;
+  //   }
+
+  //   a {
+  //     padding: 4px 16px;
+  //     margin-block: 12px;
+  //     font-size: 2.4rem;
+  //     //border: 1px solid red;
+  //     color: white;
+  //     margin-inline: 5px;
+  //     width: 100%;
+  //     display: inline-block;
+  //   }
+  // }
 
   button {
     background: transparent;
@@ -63,6 +64,52 @@ nav.principalNav {
     background-position: center;
     cursor: pointer;
   }
+}
+
+@media screen and (max-width: 767px) {
+  .scrollBlock {
+    nav.principalNav {
+      background: rgba($text, $alpha: 0.8);
+
+      .showNav {
+        background: rgba($text, $alpha: 0.9);
+        background: #2e2e2ef3 !important;
+
+      }
+    }
+  }
+  
+  menu {
+    top: 94px;
+    position: absolute;
+    flex-direction: column;
+
+    &.showNav {
+      backdrop-filter: blur(5px) !important;
+      width: 100%;
+      height: 100vh;
+      display: flex;
+
+      backdrop-filter: blur(8px);
+      mix-blend-mode: darken;
+    }
+
+    &.hideNav {
+      display: none;
+    }
+
+    a {
+      padding: 4px 16px;
+      margin-block: 12px;
+      font-size: 2.4rem;
+      //border: 1px solid red;
+      color: white;
+      margin-inline: 5px;
+      width: 100%;
+      display: inline-block;
+    }
+  }
+
 }
 
 @media screen and (min-width: 768px) {
@@ -80,7 +127,7 @@ nav.principalNav {
 
     .menu-icon {
       height: 70px !important;
-      
+
     }
 
     menu {
@@ -116,9 +163,6 @@ nav.principalNav {
       }
     }
 
-    button {
-     
-  
-    }
+    button {}
   }
 }

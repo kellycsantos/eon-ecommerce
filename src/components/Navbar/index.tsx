@@ -14,11 +14,27 @@ export default function Header() {
     const [hideMenu, sethideMenu] = useState(false)
 
     function showMenu() {
-        console.log('Valor', hideMenu)
+        const body = document.querySelector('body')
+        const menu = document.querySelector('#links_container')
+console.log(menu)
         sethideMenu(!hideMenu)
+        if (hideMenu === true) {
+
+            body?.classList.remove('scrollBlock')
+            menu?.classList.remove('gradient')
+               menu?.classList.add('teste')
+
+        } else{
+
+            body?.classList.add('scrollBlock')
+            menu?.classList.add('gradient')
+         
+           console.log('add?');
+            
+        }
+
         // criar uma classe e adicionar ela no 
         // body para impedir o scroll
-
         // hideMenu === true ?
         // document.body.style.overflowY = 'scroll' :
         // document.body.style.overflowY = 'hidden'
@@ -34,18 +50,17 @@ export default function Header() {
                 <a href='#' className='menu-icon'>
                     <img src={eonWhiteIcon} />
                 </a>
-                <menu className={`${hideMenu ? 'showNav' : 'hideNav'}`}>
+                <menu id='links_container' className={`${hideMenu ? 'showNav' : 'hideNav'}`}>
                     <li><a href="#">Inicio</a></li>
                     <li><a href="#">Produtos</a></li>
                     <li><a href="#">Suporte</a></li>
                 </menu>
                 <section>
-                    <button style={{backgroundImage: `url(${searchIcon})`}} onClick={showMenu}></button>
-                    <button style={{backgroundImage: `url(${cartIcon})`}} onClick={showMenu}></button>
-                    <button style={{backgroundImage: `url(${menuIcon})`}} onClick={showMenu}></button>
+                    <button style={{ backgroundImage: `url(${searchIcon})` }} onClick={showMenu}></button>
+                    <button style={{ backgroundImage: `url(${cartIcon})` }} onClick={showMenu}></button>
+                    <button style={{ backgroundImage: `url(${menuIcon})` }} onClick={showMenu}></button>
                 </section>
             </nav>
-
         </>
     )
 }
