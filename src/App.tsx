@@ -1,4 +1,4 @@
-import {Routes, Route} from 'react-router-dom'
+import { Routes, Route } from 'react-router-dom'
 
 import './App.scss'
 import Navbar from './components/Navbar'
@@ -9,20 +9,20 @@ function App() {
 
   return (
     <>
-    <Navbar/>
-  <Routes>
-    <Route path="/" element={<HomeView/>} />
-  </Routes>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<HomeView />} />
+      </Routes>
 
-  
-     <p>rotas</p>
-     <h1>Titulo 1</h1>
-     <h2>Titulo 2</h2>
-     <h3>Titulo 3</h3>
-     <h4>Titulo 4</h4>
-     <h5>Titulo 5</h5>
 
-{/* 
+      <p>rotas</p>
+      <h1>Titulo 1</h1>
+      <h2>Titulo 2</h2>
+      <h3>Titulo 3</h3>
+      <h4>Titulo 4</h4>
+      <h5>Titulo 5</h5>
+
+      {/* 
   -nav
   pages
   -footer
