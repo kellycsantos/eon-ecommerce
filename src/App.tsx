@@ -3,19 +3,18 @@ import { useState } from 'react'
 import './App.scss'
 import Navbar from './components/Navbar'
 let y = window.screen.height
-// let x = document.querySelector('#home-banner').clientHeight
 
 
-function menuStyle(e : any){
-  // console.log('Tamanho telaaa', x )
-  console.log('Tamanho do dispo', window.innerHeight)
-  console.log('scroll', e)
-  console.log('scroll prima', e.target?.scrollingElement.scrollTop)
-  console.log('Tamanho do scroll', e.target?.scrollingElement.scrollHeight)
-}
-// window.addEventListener("resize", onresize);
-window.addEventListener("resize",menuStyle)
-window.addEventListener( "scroll",menuStyle)
+// function menuStyle(e : any){
+//   // console.log('Tamanho telaaa', x )
+//   console.log('Tamanho do dispo', window.innerHeight)
+//   console.log('scroll', e)
+//   console.log('scroll prima', e.target?.scrollingElement.scrollTop)
+//   console.log('Tamanho do scroll', e.target?.scrollingElement.scrollHeight)
+// }
+// // window.addEventListener("resize", onresize);
+// window.addEventListener("resize",menuStyle)
+// window.addEventListener( "scroll",menuStyle)
 
 
 
