@@ -58,3 +58,17 @@ h5{
 .scrollBlock{
   overflow-y: hidden;
 }
+
+@media screen and (min-width: 768px) {
+  
+  .scrollBlock{
+    overflow-y: scroll;
+  }
+}
+
+#home-banner{
+  background-image: url('./assets/images/banner/principal_banner.png'), linear-gradient(#2b2b2b, #898989);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
