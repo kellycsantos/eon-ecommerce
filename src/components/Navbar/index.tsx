@@ -27,6 +27,11 @@ export default function Header() {
         }
     }
 
+    const elLinks = document.querySelectorAll('.link_list')
+    function clickItem(){
+        console.log('Cliquei')
+    }
+  
     return (
         <>
             <nav className={'principalNav'}>
@@ -36,7 +41,7 @@ export default function Header() {
                 <menu id='links_container' className={`${hideMenu ? 'showNav' : 'hideNav'}`}>
                     {
                         links.map((link, index) =>
-                            <NavLink to={link.url} key={index}>{link.title}</NavLink>
+                            <NavLink className='link_list' to={link.url} key={index}>{link.title}</NavLink>
                         )
                     }
                 </menu>
