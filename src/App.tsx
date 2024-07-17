@@ -3,6 +3,7 @@ import { Routes, Route } from 'react-router-dom'
 import './App.scss'
 import Navbar from './components/Navbar'
 import HomeView from './views/Home'
+import Card from './components/ProductCard'
 
 
 function App() {
@@ -14,7 +15,7 @@ function App() {
         <Route path="/" element={<HomeView />} />
       </Routes>
 
-
+      <Card />
       <p>rotas</p>
       <h1>Titulo 1</h1>
       <h2>Titulo 2</h2>
