@@ -34,7 +34,7 @@ export default function Header() {
   
     return (
         <>
-            <nav className={'principalNav'}>
+            <nav className={'principalNav'} role="navigation">
                 <a href='#' className='menu-icon'>
                     <img src={eonWhiteIcon} />
                 </a>

@@ -30,7 +30,7 @@ export default function Categories(){
       setCategory(id)
     }
     return(
-        <section className="categories">
+        <section className="categories" role="group">
           {
             categorias.map((categoria, index) => 
             
