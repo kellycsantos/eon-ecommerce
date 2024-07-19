@@ -1,10 +1,11 @@
+import './product-card.scss'
 import macbook from '../../assets/images/products/macbook.png'
 export default function Card(){
     return(
-        <section>
+        <section className='product-card'>
             <img src={macbook} alt="Macbook pro" />
-            <p>Macbook Pro '13 Cinza espacial</p>
-            <p>R$ 6.900.00</p>
+            <h5>Macbook Pro '13 Cinza espacial</h5>
+            <h6>R$ 6.900.00</h6>
         </section>
     )
 }
