@@ -3,8 +3,6 @@ import { Routes, Route } from 'react-router-dom'
 import './App.scss'
 import Navbar from './components/Navbar'
 import HomeView from './views/Home'
-import Card from './components/ProductCard'
-
 
 function App() {
 

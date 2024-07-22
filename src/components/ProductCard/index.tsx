@@ -1,6 +1,6 @@
 import './product-card.scss'
-import macbook from '../../assets/images/products/macbook.png'
-export default function Card({name,price, img}){
+import ICard from '../../interfaces/Icard'
+export default function Card({name,price, img}: ICard){
     return(
         <section className='product-card'>
             <img src={img} alt="Macbook pro" />
