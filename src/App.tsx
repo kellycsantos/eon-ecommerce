@@ -15,7 +15,6 @@ function App() {
         <Route path="/" element={<HomeView />} />
       </Routes>
 
-      <Card />
       <p>rotas</p>
       <h1>Titulo 1</h1>
       <h2>Titulo 2</h2>
