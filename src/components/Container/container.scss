@@ -1,0 +1,25 @@
+@import "../../index.scss";
+
+.Container {
+  padding-block: 40px;
+  .title {
+    font-size: 24px;
+    padding-left: 8px;
+  }
+  .body-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 64px;
+  }
+
+  @media screen and (min-width: 768px) {
+    .title {
+      font-size: 32px;
+      padding-left: 0px;
+    }
+    .body-content {
+      justify-content: left;
+    }
+  }
+}

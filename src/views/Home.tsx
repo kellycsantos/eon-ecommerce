@@ -7,6 +7,7 @@ import macbook from '../assets/images/products/macbook.png'
 import playstation from '../assets/images/products/playstation.png'
 import smart_watch from '../assets/images/products/smart_watch.png'
 import Card from "../components/ProductCard"
+import Container from "../components/Container"
 
 const products = [
   { img: echodot, name: 'Echo Dot 2.0', price: '327,40' },
@@ -20,10 +21,11 @@ export default function HomeView() {
     <>
       <Banner style='gradient' image={OfferImage} />
       <Categories />
-
-      {
-        products.map((product, index) => <Card key={index} name={product.name} price={product.price} img={product.img} />)
-      }
+      <Container title="Mais vendidos essa semana">
+        {
+          products.map((product, index) => <Card key={index} name={product.name} price={product.price} img={product.img} />)
+        }
+      </Container>
 
     </>
   )
