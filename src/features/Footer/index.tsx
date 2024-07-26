@@ -1,7 +1,8 @@
 import Button from "../../components/Button"
-import Container from "../../components/Container"
-Container
-Button
+import visa from '../../assets/images/card icons/visa.png'
+import mastercard from '../../assets/images/card icons/mastercard.png'
+import pix from '../../assets/images/card icons/pix.png'
+
 export default function Footer() {
     return (
         <footer>
