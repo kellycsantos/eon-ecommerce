@@ -9,6 +9,7 @@ import smart_watch from '../assets/images/products/smart_watch.png'
 import Card from "../components/ProductCard"
 import Container from "../components/Container"
 import GridImages from "../components/GridImage"
+import Footer from "../features/Footer"
 
 const products = [
   { img: echodot, name: 'Echo Dot 2.0', price: '327,40' },
@@ -30,6 +31,9 @@ export default function HomeView() {
       <Container>
         <GridImages/>
       </Container>
+    <Container>
+      <Footer/>
+    </Container>
 
     </>
   )
