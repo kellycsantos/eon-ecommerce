@@ -3,6 +3,7 @@ import { Routes, Route } from 'react-router-dom'
 import './App.scss'
 import Navbar from './components/Navbar'
 import HomeView from './views/Home'
+import Footer from './features/Footer'
 
 function App() {
 
@@ -19,6 +20,7 @@ function App() {
       <h3>Titulo 3</h3>
       <h4>Titulo 4</h4>
       <h5>Titulo 5</h5>
+      <Footer/>
 
       {/* 
   -nav
