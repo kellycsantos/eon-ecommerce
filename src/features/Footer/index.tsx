@@ -3,6 +3,12 @@ import visa from '../../assets/images/card icons/visa.png'
 import mastercard from '../../assets/images/card icons/mastercard.png'
 import pix from '../../assets/images/card icons/pix.png'
 
+const payment_form = [
+    {name: 'Visa', icon: visa},
+    {name: 'Mastercard', icon: mastercard},
+    {name: 'Pix', icon: pix},
+]
+
 export default function Footer() {
     return (
         <footer>
@@ -17,9 +23,11 @@ export default function Footer() {
             <div>
                 <section>
                     <h4>Forma de pagamento</h4>
-                    <span>1</span>
-                    <span>2</span>
-                    <span>3</span>
+                    {
+                        payment_form.map((form) => 
+                         <img src={form.icon} alt={form.name}/>
+                        )
+                    }
                 </section>
                 <section>
                     <h4>Selos</h4>
