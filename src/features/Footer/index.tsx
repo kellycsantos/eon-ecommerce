@@ -10,13 +10,14 @@ const payment_form = [
 ]
 
 export default function Footer() {
+    
     return (
         <footer>
             <section>
                 <h4>Links rápidos</h4>
-                <Button />
-                <Button />
-                <Button />
+                <Button text="Suporte"/>
+                <Button text="Minhas compras"/>
+                <Button text="Meu perfil"/>
             </section>
             <div style={{display: 'flex', flexWrap: 'wrap', gap: '64px'}}>
 
