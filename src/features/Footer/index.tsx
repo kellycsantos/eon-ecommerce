@@ -1,3 +1,5 @@
+import './footer.scss'
+
 import Button from "../../components/Button"
 import visa from '../../assets/images/card icons/visa.png'
 import mastercard from '../../assets/images/card icons/mastercard.png'
@@ -13,11 +15,14 @@ export default function Footer() {
     
     return (
         <footer>
-            <section>
+            <section className="links-rapidos">
                 <h4>Links rápidos</h4>
+                <div className="button-row">
+
                 <Button text="Suporte"/>
                 <Button text="Minhas compras"/>
                 <Button text="Meu perfil"/>
+                </div>
             </section>
             <div style={{display: 'flex', flexWrap: 'wrap', gap: '64px'}}>
 
