@@ -1,9 +1,10 @@
-.links-rapidos{
-    .button-row{
+section{
+    .buttons_container, .payment-forms_container{
         display: flex;
         flex-wrap: wrap;
         gap: 12px 16px;
         margin-top: 32px;
-
+        border: 1px saddlebrown solid;
     }
+
 }
