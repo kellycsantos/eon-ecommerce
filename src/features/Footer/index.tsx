@@ -17,7 +17,7 @@ export default function Footer() {
         <footer>
             <section className="links-rapidos">
                 <h4>Links rápidos</h4>
-                <div className="button-row">
+                <div className="buttons_container">
 
                 <Button text="Suporte"/>
                 <Button text="Minhas compras"/>
@@ -29,11 +29,14 @@ export default function Footer() {
             <div>
                 <section>
                     <h4>Forma de pagamento</h4>
+                    <div className="payment-forms_container">
+
                     {
                         payment_form.map((form) => 
                          <img src={form.icon} alt={form.name}/>
                         )
                     }
+                    </div>
                 </section>
                 <section>
                     <h4>Selos</h4>
