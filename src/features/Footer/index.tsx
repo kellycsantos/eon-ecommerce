@@ -5,10 +5,21 @@ import visa from '../../assets/images/card icons/visa.png'
 import mastercard from '../../assets/images/card icons/mastercard.png'
 import pix from '../../assets/images/card icons/pix.png'
 
+import raSeal from '../../assets/images/seals/reclame_aqui.png'
+import ebit from '../../assets/images/seals/ebit.png'
+import ssl from '../../assets/images/seals/ssl.png'
+
+import { Categories } from '../../constants'
+
 const payment_form = [
     {name: 'Visa', icon: visa},
     {name: 'Mastercard', icon: mastercard},
     {name: 'Pix', icon: pix},
+]
+const seals = [
+    {name: 'Reclame aqui', icon: raSeal},
+    {name: 'Ebit Excelente', icon: ebit},
+    {name: 'SSL Certificado', icon: ssl},
 ]
 
 export default function Footer() {
@@ -40,24 +51,22 @@ export default function Footer() {
                 </section>
                 <section>
                     <h4>Selos</h4>
-                    <span>1</span>
-                    <span>2</span>
-                    <span>3</span>
+                    <div className="seals_container">
+
+                    {
+                        seals.map((seal) => 
+                         <img src={seal.icon} alt={seal.name}/>
+                        )
+                    }
+                    </div>
                 </section>
             </div>
             <div>
                 <section>
                     <h4>Categorias</h4>
-                    <p>Lorem, ipsum</p>
-                    <p>Ipsum</p>
-                    <p>Lorem, ipsum</p>
-                    <p>Ipsum</p>
-                    <p>Lorem, ipsum</p>
-                    <p>Ipsum</p>
-                    <p>Lorem, ipsum</p>
-                    <p>Ipsum</p>
-                    <p>Ipsum</p>
-
+                    {
+                        Categories.map((category, index) => <li key={index}>{category.categoryName}</li>)
+                    }
                 </section>
             </div>
             <div>
