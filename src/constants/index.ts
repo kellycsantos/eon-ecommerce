@@ -40,3 +40,22 @@ export const Categories = [
         categoryName: 'Video games'
     },
 ]
+
+export const AboutUs = [
+    {
+        link: '#',
+        title: 'Nossa visão'
+    },
+    {
+        link: '#',
+        title: 'Nossos valores'
+    },
+    {
+        link: '#',
+        title: 'Politicas de privacidade'
+    },
+    {
+        link: '#',
+        title: 'Trabalhe conosco'
+    },
+]
